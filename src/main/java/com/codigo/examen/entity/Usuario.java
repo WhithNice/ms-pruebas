@@ -52,9 +52,9 @@ public class Usuario implements UserDetails {
             joinColumns = @JoinColumn(name = "id_usuario"),
             inverseJoinColumns = @JoinColumn(name = "id_rol"))
     private Set<Rol> roles = new HashSet<>();
-    public Set<String> getRolesNames() {
-        return roles.stream().map(Rol::getNombreRol).collect(Collectors.toSet());
-    }
+//    public Set<String> getRolesNames() {
+//        return roles.stream().map(Rol::getNombreRol).collect(Collectors.toSet());
+//    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
